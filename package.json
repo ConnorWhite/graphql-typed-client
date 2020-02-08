@@ -24,6 +24,7 @@
   "types": "./dist/index.d.ts",
   "repository": "git@github.com:ConnorWhite/graphql-typed-client.git",
   "author": "Connor White <connor.bcw@gmail.com>",
+  "private": false,
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && tsc && chmod +x ./dist/cli.js",
