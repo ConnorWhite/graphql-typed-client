@@ -62,7 +62,7 @@ Options:
   -o, --output <./myClient>                    output directory
   -e, --endpoint <http://example.com/graphql>  GraphQL endpoint
   -p, --post                                   use POST for introspection query
-  -H, --header <header: value>                 headers to use in fetch
+  -H, --header <'header: value'>                 headers to use in fetch
   -s, --schema <./*.graphql>                   glob pattern to match GraphQL schema definition files
   -f, --fetcher <./schemaFetcher.js>           path to introspection query fetcher file
   -c, --config <./myConfig.js>                 path to config file
