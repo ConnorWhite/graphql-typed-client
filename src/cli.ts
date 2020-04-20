@@ -9,11 +9,15 @@ import { validateConfigs } from './cliHelpers/validateConfigs'
 import { Config } from './config'
 import { requireModuleFromPath } from './helpers/files'
 
+function collect(value: string, previous: string[]) {
+  return previous.concat([value])
+}
+
 program
   .option('-o, --output <./myClient>', 'output directory')
   .option('-e, --endpoint <http://example.com/graphql>', 'GraphQL endpoint')
   .option('-p, --post', 'use POST for introspection query')
-  .option('-H, --headers <{ "header": "value", ... }>', 'headers to use in fetch')
+  .option('-H, --headers <header: value>', 'headers to use in fetch', collect, [])
   .option('-s, --schema <./mySchema.graphql>', 'path to GraphQL schema definition file')
   .option('-f, --fetcher <./schemaFetcher.js>', 'path to introspection query fetcher file')
   .option('-c, --config <./myConfig.js>', 'path to config file')
