@@ -18,6 +18,12 @@ export const validateConfigs = (configs: Config[]) => {
       )
 
     if (!config.output) errors.push(`you didn't provide an \`output\` option in ${whichConfig}`)
+
+    if (config.headers) {
+      config.headers.forEach(header => {
+        if (!header.includes(':')) errors.push(`header options is invalid in ${whichConfig}`)
+      })
+    }
   })
 
   errors.forEach(error => console.log(chalk.red(`Error: ${error}`)))

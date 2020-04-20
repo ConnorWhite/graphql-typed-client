@@ -23,9 +23,22 @@ export const fetchSchema = async (
   endpoint: string,
   usePost = false,
   options?: GraphQLSchemaValidationOptions,
-  headers?: string,
+  headers?: string[],
 ) => {
-  const jsonHeaders = headers ? JSON.parse(headers) : undefined
+  const jsonHeaders = headers
+    ? headers.reduce(
+        (retval, header) => {
+          const split = header.split(':')
+          if (split.length > 1) {
+            retval[split[0].trim()] = split[1].trim()
+          }
+          return retval
+        },
+        {} as {
+          [key: string]: string
+        },
+      )
+    : undefined
   const result = usePost
     ? await post<ExecutionResult<IntrospectionQuery>>(endpoint, { query: getIntrospectionQuery() }, jsonHeaders)
     : await get<ExecutionResult<IntrospectionQuery>>(endpoint, { query: getIntrospectionQuery() }, jsonHeaders)
