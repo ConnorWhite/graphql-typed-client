@@ -19,7 +19,7 @@
     "scalar-types",
     "custom-scalar"
   ],
-  "version": "1.7.5",
+  "version": "1.7.6",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": "git@github.com:ConnorWhite/graphql-typed-client.git",
