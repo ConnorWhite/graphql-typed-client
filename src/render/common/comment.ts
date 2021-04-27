@@ -1,5 +1,5 @@
 import { GraphQLArgument, GraphQLEnumValue, GraphQLField, GraphQLInputField, GraphQLNamedType } from 'graphql'
-import Maybe from 'graphql/tsutils/Maybe'
+import { Maybe } from 'graphql/jsutils/Maybe'
 
 export const comment = (comment: { text?: Maybe<string>; deprecated?: Maybe<string> }) => {
   const lines: string[] = []

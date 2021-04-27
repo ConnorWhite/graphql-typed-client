@@ -19,7 +19,7 @@
     "scalar-types",
     "custom-scalar"
   ],
-  "version": "1.7.4",
+  "version": "1.7.5",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": "git@github.com:ConnorWhite/graphql-typed-client.git",
@@ -48,7 +48,6 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@types/graphql": "^14.5.0",
     "@types/isomorphic-fetch": "^0.0.35",
     "@types/lodash": "^4.14.149",
     "@types/node": "*",
@@ -57,7 +56,7 @@
     "@types/ws": "^6.0.1",
     "chalk": "^2.4.2",
     "commander": "^2.19.0",
-    "graphql": "^14.5.8",
+    "graphql": "^15.5.0",
     "graphql-toolkit": "^0.3.0",
     "graphql-tools": "^4.0.6",
     "isomorphic-fetch": "^2.2.1",
